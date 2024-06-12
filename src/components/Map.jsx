@@ -1,17 +1,16 @@
 import styles from "./Map.module.css";
 import { useEffect, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { MapContainer, Marker, Popup, TileLayer, useMap, useMapEvents } from "react-leaflet";
 import useCities from "../contexts/useCities";
 import { useGeolocation } from "../hooks/useGeolocation";
+import { useUrlPosition } from "../hooks/useUrlPosition";
 import Button from "./Button";
 
 function Map() {
 	const { cities } = useCities();
 	const [mapPosition, setMapPosition] = useState([40, 0]);
-	const [searchParams] = useSearchParams();
-	const mapLat = searchParams.get("lat");
-	const mapLng = searchParams.get("lng");
+	const [mapLat, mapLng] = useUrlPosition();
 	const {
 		isLoading: isLoadingPosition,
 		position: geolocationPosition,
@@ -65,7 +64,7 @@ function ChangeCenter({ position }) {
 function DetectClick() {
 	const navigate = useNavigate();
 	useMapEvents({
-		click: (event) => navigate(`form?lat:${event.latlng.lat}&lng:${event.latlng.lng}`),
+		click: (event) => navigate(`form?lat=${event.latlng.lat}&lng=${event.latlng.lng}`),
 	});
 }
 
