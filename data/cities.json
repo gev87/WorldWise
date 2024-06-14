@@ -37,27 +37,27 @@
       "id": "98443197"
     },
     {
-      "id": "3be1",
-      "cityName": "Nessetal",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2024-06-13T12:13:50.537Z",
+      "id": "6e03",
+      "cityName": "Wald am Schoberpaß",
+      "country": "Austria",
+      "emoji": "🇦🇹",
+      "date": "2024-06-14T07:03:12.974Z",
       "notes": "",
       "position": {
-        "lat": "50.98609893339354",
-        "lng": "10.546875000000002"
+        "lat": "47.47266286861342",
+        "lng": "14.655761718750002"
       }
     },
     {
-      "id": "a217",
-      "cityName": "Konotop",
+      "id": "729c",
+      "cityName": "Zvenihorodka",
       "country": "Ukraine",
       "emoji": "🇺🇦",
-      "date": "2024-06-13T12:20:29.577Z",
+      "date": "2024-06-14T07:06:22.681Z",
       "notes": "",
       "position": {
-        "lat": "51.23440735163461",
-        "lng": "33.04687500000001"
+        "lat": "48.83579746243093",
+        "lng": "31.047363281250004"
       }
     }
   ]
