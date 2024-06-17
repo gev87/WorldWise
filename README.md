@@ -1,6 +1,5 @@
 # React + Vite
-
-"In the project, we use several hooks and packages to enhance functionality. We utilize react-router-dom hooks for navigation and the useMap hook from react-leaflet to change the center of the map. The useMapEvents hook from react-leaflet is used to detect the coordinates of the clicked place on the map. Additionally, we have custom hooks such as useGeolocation to get the current position's coordinates and useUrlPosition to retrieve coordinates from the URL. We integrate the react-datepicker package for date selection. Moreover, we employ custom functions like delay(ms) to artificially delay the response of an HTTP call and convertToEmoji(countryCode) to create a flag emoji from any country code."
+In our project, we utilize several hooks and packages to enhance functionality. For displaying the map, we use Leaflet and React-Leaflet. Navigation is handled by React Router DOM hooks, while the useMap and useMapEvents hooks from React-Leaflet change the map center and detect clicked coordinates. Custom hooks like useGeolocation fetch the current position, and useUrlPosition retrieves coordinates from the URL. We integrate React-Datepicker for date selection. Additionally, we use custom functions like delay(ms) to simulate HTTP call delays and convertToEmoji(countryCode) to create flag emojis. CSS modules are used for styling, ensuring easy and modular usage.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
