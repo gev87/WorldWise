@@ -1,4 +1,4 @@
-import { createContext, useEffect, useReducer } from "react";
+import { createContext, useCallback, useEffect, useReducer } from "react";
 import { BASE_URL } from "../constants";
 import { delay } from "../utils";
 
@@ -44,7 +44,7 @@ function CitiesProvider({ children }) {
 	const [state, dispatch] = useReducer(reducer, initialState);
 	const { cities, isLoading, currentCity, error } = state;
 
-	async function getCity(id) {
+	const getCity = useCallback( async function(id) {
 		if (id === currentCity.id) return;
 		dispatch({ type: "loading" });
 		try {
@@ -55,7 +55,7 @@ function CitiesProvider({ children }) {
 		} catch {
 			dispatch({ type: "rejected", payload: "There was an error loading current city." });
 		}
-	}
+	},[currentCity.id])
 
 	async function createCity(newCity) {
 		dispatch({ type: "loading" });
